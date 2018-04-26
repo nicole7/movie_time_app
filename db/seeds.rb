@@ -1,19 +1,29 @@
-movie = Movie.create(title: "The Big Lebowski", time: "12:00pm", limit: 10)
 
-movie = Movie.create(title: "The Big Lebowski", time: "2:45pm", limit: 10)
+movie = Movie.create(title: "The Big Lebowski", day_of_week: "Tuesday", time_of_show: 12:00:00, limit: 10)
+movie = Movie.create(title: "The Big Lebowski", day_of_week: "Thursday", time_of_show: 12:00:00, limit: 10)
 
-movie = Movie.create(title: "The Big Lebowski", time: "7:00pm", limit: 10)
+movie = Movie.create(title: "The Big Lebowski", day_of_week: "Tuesday", time_of_show: 14:45:00, limit: 10)
+movie = Movie.create(title: "The Big Lebowski", day_of_week: "Thursday", time_of_show: 14:45:00, limit: 10)
 
-movie = Movie.create(title: "Pulp Fiction", time: "12:00pm", limit: 10)
+movie = Movie.create(title: "The Big Lebowski", day_of_week: "Tuesday", time_of_show: 15:00:00, limit: 10)
+movie = Movie.create(title: "The Big Lebowski", day_of_week: "Thursday", time_of_show: 15:00:00, limit: 10)
 
-movie = Movie.create(title: "Pulp Fiction", time: "2:45pm", limit: 10)
+movie = Movie.create(title: "Pulp Fiction", day_of_week: "Tuesday", time_of_show: 12:00:00, limit: 10)
+movie = Movie.create(title: "Pulp Fiction", day_of_week: "Tuesday", time_of_show: 12:00:00, limit: 10)
 
-movie = Movie.create(title: "Pulp Fiction", time: "7:00pm", limit: 10)
+movie = Movie.create(title: "Pulp Fiction", day_of_week: "Tuesday", time_of_show: 14:45:00, limit: 10)
+movie = Movie.create(title: "Pulp Fiction", day_of_week: "Thursday", time_of_show: 14:45:00, limit: 10)
 
-movie = Movie.create(title: "Brazil", time: "12:00pm", limit: 10)
+movie = Movie.create(title: "Pulp Fiction", day_of_week: "Tuesday", time_of_show: 15:00:00, limit: 10)
+movie = Movie.create(title: "Pulp Fiction", day_of_week: "Thursday", time_of_show: 15:00:00, limit: 10)
 
-movie = Movie.create(title: "Brazil", time: "2:45pm", limit: 10)
+movie = Movie.create(title: "Brazil", day_of_week: "Tuesday", time_of_show: 12:00:00, limit: 10)
+movie = Movie.create(title: "Brazil", day_of_week: "Thursday", time_of_show: 12:00:00, limit: 10)
 
-movie = Movie.create(title: "Brazil", time: "7:00pm", limit: 10)
+movie = Movie.create(title: "Brazil", day_of_week: "Tuesday", time_of_show: 14:45:00, limit: 10)
+movie = Movie.create(title: "Brazil", day_of_week: "Thursday", time_of_show: 14:45:00, limit: 10)
+
+movie = Movie.create(title: "Brazil", day_of_week: "Tuesday", time_of_show: 15:00:00, limit: 10)
+movie = Movie.create(title: "Brazil", day_of_week: "Thursday", time_of_show: 15:00:00, limit: 10)
 
 
