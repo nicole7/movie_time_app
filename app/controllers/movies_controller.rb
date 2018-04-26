@@ -1,10 +1,6 @@
  class MoviesController < ApplicationController
    def index
-      @movie = Movie.all.order('created_at DESC')
-    end
-
-    def new
-      @movie = Movie.new
+      @movies = Movie.all.order('created_at DESC')
     end
 
     def destroy

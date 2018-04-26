@@ -1,9 +1,13 @@
 class CreateAttendings < ActiveRecord::Migration[5.2]
   def change
     create_table :attendings do |t|
+      t.decimal :total_sales
+      t.string :cx_first_name
+      t.string :cx_last_name
+      t.string :cc
+      t.string :exp_date
       t.integer :user_id, index: true
       t.integer :movie_id, index: true
-      t.decimal :total_sales
       t.timestamps
     end
   end

@@ -1,0 +1,13 @@
+<div class="container">
+  <h1><%= current_user.first_name %>'s Profile Page</h1>
+  <% if current_user.attendings.empty?  %>
+    <%= "You do not have movie ticket purchases yet."%>
+    <% else %>
+    <%= link_to 'Purchase', '/attendings/new' %>
+    <%=" a attending or "%>
+    <% end %>
+    <% current_user.attendings.each do |attending| %>
+      <%= attending %>
+    <% end %>
+  <% end %>
+</div>

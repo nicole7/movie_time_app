@@ -1,5 +1,6 @@
 Creating user and simple signup. Admin will have their own:
 username: admin
+email: admin@admin.com
 password: admin
 
 Schema will consist of a many to many relationship of User and Movie
