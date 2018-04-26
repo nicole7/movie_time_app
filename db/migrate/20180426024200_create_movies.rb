@@ -4,7 +4,7 @@ class CreateMovies < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :time
       t.integer :limit
-      t.boolean :sold_out?
+      t.boolean :sold_out?, default: false
       t.timestamps
     end
   end
