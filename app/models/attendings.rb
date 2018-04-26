@@ -1,4 +1,4 @@
-class Attending < ApplicationRecord
+class Attendings < ApplicationRecord
   belongs_to :user
   belongs_to :movie
 end

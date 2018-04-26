@@ -1,5 +1,5 @@
 <div class="container">
-  <h1><%= current_user.first_name %>'s Profile Page</h1>
+  <h1><%= current_user.username %>'s Profile Page</h1>
   <% if current_user.attendings.empty?  %>
     <%= "You do not have movie ticket purchases yet."%>
     <% else %>
@@ -9,5 +9,4 @@
     <% current_user.attendings.each do |attending| %>
       <%= attending %>
     <% end %>
-  <% end %>
 </div>

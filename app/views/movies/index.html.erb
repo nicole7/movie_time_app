@@ -3,19 +3,22 @@
       <li>Movie: <%= movie.title %></li>
       <li>Day showing: <%= movie.day_of_week %></li>
       <li>Time: <%= movie.time_of_show %></li>
-      <li>Price: <%= movie.ticket_price %></li>
-      <% if !movie.sold_out? %>
+      <li>Price: $<%= movie.ticket_price %></li>
+      <% if movie.sold_out? == true %>
         <li>SOLD OUT</li>
-      <% end %>
-    <% end %>
-    <span class="sr-only"></span>
-  </a>
-</li>
-
-<% if logged_in? %>
+      <% else %>
+        <% if logged_in? %>
   <li class="options">
     <a href="/attendings/new">purchase ticket
       <span class="sr-only"></span>
     </a>
   </li>
 <% end %>
+      <% end %>
+      <br></br>
+    <% end %>
+    <span class="sr-only"></span>
+  </a>
+</li>
+
+

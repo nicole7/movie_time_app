@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2018_04_26_024200) do
     t.decimal "total_sales"
     t.string "cx_first_name"
     t.string "cx_last_name"
-    t.string "cc"
+    t.integer "cc_number"
     t.string "exp_date"
     t.integer "user_id"
     t.integer "movie_id"
@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(version: 2018_04_26_024200) do
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.string "day_of_week"
-    t.time "time_of_show"
+    t.string "time_of_show"
     t.integer "seat_limit"
-    t.decimal "ticket_price"
+    t.integer "ticket_price"
     t.boolean "sold_out?", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
