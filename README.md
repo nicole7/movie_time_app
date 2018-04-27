@@ -18,3 +18,4 @@ Once signed in, they can see their own movie tickets purchased in their profiles
 Admin will see in their profile the total sales, total tickets sold
 as well as a breakdown for each movie, most popular movies, most popular times of the day, and revenue by day of week
 - In order to get day of week, I have decided I will be adding days in the seed and migration file as well
+- .......................
