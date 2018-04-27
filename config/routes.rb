@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   resources :movies
   resources :users
-  resources :attendings
+  resources :orders
 
-  root "movies#index"
+  root "orders#index"
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
