@@ -3,9 +3,12 @@ username: admin
 email: admin@admin.com
 password: admin
 
-Schema will consist of a many to many relationship of User and Movie
-A join table of Attendings will connect both foreign keys
-Attendings will have total sales as a column and keep track of user to movie sales 
+Schema will consist of a many to many relationship between Order and Movie where Order belongs to a User
+
+Order will consist of credit card information the customer is to plug in
+
+A join table of Ordered_Movies will connect both foreign keys
+Order and Movie 
   
     
 Users will be shown all movies and times when they arrive on site
