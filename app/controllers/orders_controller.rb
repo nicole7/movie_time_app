@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   def index
     @movies = Movie.all.order('created_at ASC')
   end
+
   def new
     @order = Order.new
   end
