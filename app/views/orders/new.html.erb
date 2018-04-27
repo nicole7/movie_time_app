@@ -3,9 +3,9 @@
   <%= form_for (@order) do |f| %>
       <% if @order.errors.any?%>
         <div id="errors">
-          <h2><%= pluralize(@orders.errors.count, "error")%> prevented this post from saving</h2>
+          <h2><%= pluralize(@order.errors.count, "error")%> prevented this post from saving</h2>
               <ul>
-                <% @post.errors.full_messages.each do |msg| %>
+                <% @order.errors.full_messages.each do |msg| %>
                   <li><%= msg %></li>
                 <% end %>
             </ul>
@@ -14,9 +14,6 @@
 
     <p>
       <%= f.hidden_field :user_id, :value => current_user.id %>
-    </p>
-    <p>
-      <%= f.hidden_field :movie_id, :value => movie.id %>
     </p>
     <div class="cx_first_name">
       <%= f.label :cx_first_name %><br>

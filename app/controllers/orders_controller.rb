@@ -4,16 +4,18 @@ class OrdersController < ApplicationController
     @movies = Movie.all.order('created_at ASC')
   end
   def new
-    order = Order.new
+    @order = Order.new
   end
 
   def create
     @order = Order.new(secure_params)
     current_user.orders << @order
 
+
     if @order.save
       redirect_to @order
     else
+      @errors = ["Your password/email combination are incorrect."]
       render 'new'
     end
   end

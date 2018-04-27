@@ -10,24 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_26_235405) do
+ActiveRecord::Schema.define(version: 2018_04_27_020054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "attendings", force: :cascade do |t|
-    t.decimal "total_sales"
-    t.string "cx_first_name"
-    t.string "cx_last_name"
-    t.integer "cc_number"
-    t.string "exp_date"
-    t.integer "user_id"
-    t.integer "movie_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["movie_id"], name: "index_attendings_on_movie_id"
-    t.index ["user_id"], name: "index_attendings_on_user_id"
-  end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
@@ -36,13 +22,30 @@ ActiveRecord::Schema.define(version: 2018_04_26_235405) do
     t.integer "seat_limit"
     t.integer "ticket_price"
     t.boolean "sold_out?", default: false
+    t.bigint "ordered_movies_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["ordered_movies_id"], name: "index_movies_on_ordered_movies_id"
+  end
+
+  create_table "ordered_movies", force: :cascade do |t|
+    t.bigint "order_id"
+    t.bigint "movie_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["movie_id"], name: "index_ordered_movies_on_movie_id"
+    t.index ["order_id"], name: "index_ordered_movies_on_order_id"
   end
 
   create_table "orders", force: :cascade do |t|
+    t.string "cx_first_name"
+    t.string "cx_last_name"
+    t.integer "cc_number"
+    t.string "exp_date"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

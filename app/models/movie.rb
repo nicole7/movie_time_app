@@ -1,4 +1,4 @@
 class Movie < ApplicationRecord
-  has_many :attendings
-  has_many :users, through: :attendings
+  belongs_to :order
+  has_many :users, through: :orders, source: :user
 end
