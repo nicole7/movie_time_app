@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :orders do
-    resources :ordered_movies, :movies
+    resources :movies
   end
   resources :users
 
